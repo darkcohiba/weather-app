@@ -1,3 +1,4 @@
+const request = require('postman-request');
 //https://weatherstack.com/dashboard weather docs
 const apiKeyWeather = 'db56fd11ee89595a2da699cbbda005b4';
 
@@ -14,3 +15,8 @@ function callWeather(city, callback){
         }
         });
 }
+
+module.exports = {
+    callWeather
+}
+    
