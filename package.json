@@ -1,9 +1,10 @@
 {
   "name": "weather-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Weather app for course on Udemy",
   "main": "app.js",
   "scripts": {
+    "app": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

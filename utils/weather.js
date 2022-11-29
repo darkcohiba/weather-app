@@ -4,7 +4,7 @@ const apiKeyWeather = 'db56fd11ee89595a2da699cbbda005b4';
 
 
 function callWeather(city, callback){
-    const weatherUrl = `http://api.weatherstack.com/current?access_key=${apiKeyWeather}&query=${city}`;
+    const weatherUrl = `http://api.weatherstack.com/current?units=f&access_key=${apiKeyWeather}&query=${city}`;
     request({ url: weatherUrl, json: true}, (error, response) => {
         if (error) {
             callback('Unable to connect to weather service!', undefined);
