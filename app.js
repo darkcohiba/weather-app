@@ -9,12 +9,12 @@ getWetherByLocation(locationOI);
 function getWetherByLocation(locationOI){
     return (
         locationOI ? 
-            geocode.callMapBox(locationOI, (error, data) => {
+            geocode.callMapBox(locationOI, (error, { location }) => {
                     if (error) {
                         return console.log('Error', error);
                     } else {
-                        console.log(data.location);
-                        weather.callWeather(data.location, (error, data) => {
+                        console.log(location);
+                        weather.callWeather(location, (error, data) => {
                             if (error) {
                                 console.log('Error', error);
                             } else {
